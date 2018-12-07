@@ -4,12 +4,13 @@ const map = L.map('map', {
    layers: [
       Tangram.leafletLayer({
          scene: 'scene.yaml',
-         events: { hover: onMapHover }
+         events: { hover: showTooltip, click: showTooltip }
       })
-   ]
+   ],
+   zoomControl: false
 });
 
-function onMapHover(selection) {
+function showTooltip(selection) {
    if (selection.feature) {
       const tooltipHtml =
          `<div class="tooltip-title">${selection.feature.properties.Title}</div>
