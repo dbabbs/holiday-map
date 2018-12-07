@@ -1,5 +1,5 @@
 const map = L.map('map', {
-   center: [41.680407, -87.668558],
+   center: [41.7317392281872, -87.51007854938509],
    zoom: 11.4,
    layers: [
       Tangram.leafletLayer({
